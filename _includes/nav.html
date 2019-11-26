@@ -24,15 +24,12 @@
                         <a href="{{ site.baseurl }}/">Home</a>
                     </li>
                     <li>
-                        <a href="{{ '/' | prepend: site.url }}">Test</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.baseurl }}/">Post</a>
+                        <a href="{{ site.baseurl }}/blog">Post</a>
                     </li>
                     {% for page in site.pages %}
                     {% if page.title and page.hide-in-nav != true %}
                     <li>
-                        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                        <a href="{{ site.baseurl }}blog/{{ page.url }}">{{ page.title }}</a>
                         <!-- <a href="{{ page.url | prepend: site.baseurl }}/post/">{{ page.title }}</a> -->
                     </li>
                     {% endif %}
